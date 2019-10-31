@@ -1,0 +1,96 @@
+body{
+    background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 51%, #ffecd2 100%);
+    margin: auto;
+}
+h3{
+    color: purple;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-left: 15%;
+    margin-top: 5%;
+}
+.carousel-inner img {
+    margin: auto;
+    width: 100%;
+  }
+  .centerCarousel{
+      margin: auto;
+      align-items: center;
+      max-width: 400px;
+      width: 80%;
+  }
+    .progress{
+        width: 50%;
+        margin: auto;
+    }
+.progress-bar{
+    background-image: linear-gradient(to right, purple, pink, white);
+    border: 10;
+    width: 10%;
+}
+.progress-bar-striped{
+    background-image: linear-gradient(to right, purple, pink, white);
+    width: 75%;
+}
+  .btn-primary {
+     margin: auto;
+     background-color: rgb(151, 75, 135);
+    border-color: black;
+    width: 80%;
+    max-width: 200px;
+    font-size: 80%;
+  }
+  .btn-primary:hover{
+      background-color: red;
+  }
+  .form-control-file{
+    margin: auto;
+    width: 40%;
+}
+#Spinnerbutton.btn-primary{
+    color: black;
+    background-image: linear-gradient(to right, purple, pink, purple);
+    width: 75%;
+    max-width: 200px;
+}
+.pagination{
+    margin:auto;
+}
+.form-group{
+    margin: auto;
+    width: 90%;
+    max-width: 1000px;
+}
+.form-control-file{
+    width: 50%;
+    font-size: 80%;
+}
+#dropdowniFrame{
+    overflow: hidden;
+    border: 0;
+}
+.btn-secondary
+{
+    background-color: rgb(151, 75, 135);
+    width: 80%;
+    max-width: 300px;
+    font-size: 80%;
+}
+.card{
+    width:90%;
+    max-width: 500px;
+    margin: auto;
+}
+#ZüchterButton1{
+    width: 100%;
+}
+#ZüchterButton2{
+    width: 100%;
+}
+.list-group-item-action{
+    width: 50%;
+    background-color: white;
+    margin: auto;
+}
+.list-group-item-action:hover{
+    background-color: rgb(151, 75, 135);
+}

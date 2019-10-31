@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Beispiele</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="bootstrapFunction.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="StyleBootstrapHomework.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <a class="navbar-brand">
+      <img src="logo_bootstrap.jpg" id="logo" class="d-inline-block align-top" alt="Logo of Bootstrap"/>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#Carousel">Carousel</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#progress">Progressbar</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Forms">Forms</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Spinner">Spinner</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Pagination">Pagination</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Dropdown">Dropdown</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Cards">Cards</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Listgroup">Listgroup</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Modals">Modals</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Popover">Popover</a>
+        </li>
+        </ul>
+    </div>
+  </nav>
+  <main>
+    <!-- Carousel -->
+    <br id="Carousel">
+    <div>
+      <h3 data-aos="fade-down-left">Carousel:</h3>
+      <br><br>
+      <div class="container" data-aos="fade-down-left">
+        <div class="centerCarousel">
+          <div id="carouselId" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselId" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselId" data-slide-to="1"></li>
+              <li data-target="#carouselId" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+              <div class="carousel-item active">
+                <img src="HerzApfel.jpeg" alt="Herz im Apfel" class="img-responsive center-block">
+              </div>
+              <div class="carousel-item">
+                <img src="Wasserstein.jpeg" alt="Stein fällt ins Wasser" class="img-responsive center-block">
+              </div>
+              <div class="carousel-item">
+                <img src="Sonnenblumenfeld.jpeg" alt="Sonnenblumenfeld" class="img-responsive center-block">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselId" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselId" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br><br><br>
+    <!-- Progressbar -->
+    <br id="progress">
+    <h3 data-aos="flip-right">Progressbar:</h3>
+    <br><br>
+    <div class="container" data-aos="flip-right">
+      <div class="progress">
+        <div id="animatedProgressbar" class="progress-bar-striped progress-bar-animated" role="progressbar"
+          aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+      <br><br>
+      <div class="progress">
+        <div class="progress-bar" id="movingProgressbar" role="progressbar" aria-valuenow="25" aria-valuemin="0"
+          aria-valuemax="100">25%</div>
+      </div>
+      <br>
+      <div>
+        <button class="btn btn-primary btn-block" type="button" onclick="move()">Show loading</button>
+      </div>
+    </div>
+    <br><br><br>
+    <!-- Forms -->
+    <br id="Forms">
+    <h3 data-aos="zoom-out-left">Forms:</h3>
+    <br><br>
+    <div class="container" data-aos="zoom-out-left">
+      <form>
+        <div class="form-group">
+          <label class="col-sm-2 col-form-label">E-mail</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="E-mail">
+        </div>
+        <div class="form-group">
+          <label class="col-sm-2 col-form-label">Passwort</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Passwort">
+        </div>
+        <br>
+        <button type="button" class="btn btn-primary btn-block">Login</button>
+      </form>
+
+      <br><br><br>
+      <form>
+        <div class="form-group">
+          <label class="form-control-file">Bitte laden Sie hier ihr Dokument hoch:</label>
+          <input type="file" class="form-control-file">
+        </div>
+      </form>
+    </div>
+    <br><br>
+    <!-- Spinner -->
+    <br id="Spinner">
+    <h3 data-aos="zoom-in">Spinner:</h3>
+    <br><br>
+    <div class="container" data-aos="zoom-in">
+      <div class="text-center">
+        <button class="btn btn-primary" id="Spinnerbutton" type="button" disabled>
+          <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+          Please wait we are checking your input...
+        </button>
+      </div>
+      <br><br>
+      <div class="text-center">
+        <div class="spinner-border" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+        <div class="spinner-grow" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+
+        <div class="spinner-grow" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+        <div class="spinner-grow text-secondary" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+        <div class="spinner-grow text-success" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+        <div class="spinner-grow text-danger" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+        <div class="spinner-grow text-warning" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+        <div class="spinner-grow text-info" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+    </div>
+    <br><br>
+    <!-- Pagination -->
+    <br id="Pagination">
+    <h3 data-aos="fade-down-right">Pagination:</h3>
+    <br><br>
+    <div class="container" data-aos="fade-down-right">
+      <div class="text-center">
+        <nav aria-label="Page navigation example">
+          <ul class="pagination justify-content-center">
+            <li class="page-item"><a class="page-link">First</a></li>
+            <li class="page-item"><a class="page-link">1</a></li>
+            <li class="page-item"><a class="page-link">2</a></li>
+            <li class="page-item"><a class="page-link">Last</a></li>
+          </ul>
+        </nav>
+      </div>
+      <br><br>
+      <div class="text-center">
+        <nav aria-label="Page navigation example">
+          <ul class="pagination justify-content-center">
+            <li class="page-item">
+              <a class="page-link" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            <li class="page-item"><a class="page-link">1</a></li>
+            <li class="page-item"><a class="page-link">2</a></li>
+            <li class="page-item"><a class="page-link">3</a></li>
+            <li class="page-item">
+              <a class="page-link" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <br><br>
+    <!-- Dropdown -->
+    <br id="Dropdown">
+    <h3 data-aos="flip-up">Dropdown:</h3>
+    <br><br>
+    <div class="container" data-aos="flip-up">
+      <div class="text-center">
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Animals
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item active" href="Hund.jpeg" target="dropdownFrame">Hund</a>
+            <a class="dropdown-item" href="Pferd.jpeg" target="dropdownFrame">Pferd</a>
+            <a class="dropdown-item" href="Hund_und_Katze.jpeg" target="dropdownFrame">Hund und
+              Katze</a>
+          </div>
+        </div>
+        <div>
+          <iframe src="Hund.jpeg" scrolling="no" id="dropdowniFrame" name="dropdownFrame"></iframe>
+        </div>
+        <br><br>
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Movie Description
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="https://de.wikipedia.org/wiki/Batman_Begins">Batman Begins</a>
+            <a class="dropdown-item" href="https://de.wikipedia.org/wiki/Spider-Man:_Homecoming">Spiderman
+              Homecoming</a>
+            <a class="dropdown-item" href="https://de.wikipedia.org/wiki/Suicide_Squad_(Film)">Suicide Squad</a>
+            <a class="dropdown-item" href="https://de.wikipedia.org/wiki/Deadpool_(Film)">Deadpool</a>
+            <a class="dropdown-item" href="https://de.wikipedia.org/wiki/Thor">Thor</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br><br>
+    <!-- Cards -->
+    <br id="Cards">
+    <h3 data-aos="zoom-in-down">Cards:</h3>
+    <br><br>
+    <div class="container" data-aos="zoom-in-down">
+      <div class="text-center">
+        <div class="row padding">
+          <div class="card-deck padding">
+            <div class="card">
+              <img src="Goldendoodle.jpeg" class="card-img-top" alt="Goldendoodle">
+              <div class="card-body">
+                <h5 class="card-title">Goldendoodle</h5>
+                <p class="card-text"> Es sind intelligente, fröhliche und anhängliche Hunde. Die Hunderasse ist ein
+                  Mischung aus Pudel und Golden Retriever.</p>
+                <a href="https://goldendoodlebodensee.wordpress.com/" class="btn btn-primary"
+                  id="ZüchterButton1">Beusche einen Züchter</a>
+              </div>
+            </div>
+            <div class="card">
+              <img src="Westi.jpeg" class="card-img-top" alt="West Highland White Terrier">
+              <div class="card-body">
+                <h5 class="card-title">West Highland White Terrier</h5>
+                <p class="card-text"> Es sind fröhliche, wachsame, kinderliebe und gutmütige Hund. Die Hunderasse ist
+                  auch für Allergiker geeignet.</p>
+                <a href="https://www.emylanewesties.at/" class="btn btn-primary" id="ZüchterButton2">Beusche einen
+                  Züchter</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br><br>
+    <!-- Listgroup -->
+    <br id="Listgroup">
+    <h3 data-aos="flip-left">Listgroup:</h3>
+    <br><br>
+    <div class="container" data-aos="flip-left">
+      <div class="text-center">
+        <div class="list-group" id="list-tab" role="tablist">
+          <a class="list-group-item list-group-item-action" data-toggle="list" role="tab">Home</a>
+          <a class="list-group-item list-group-item-action" data-toggle="list" role="tab">Help</a>
+          <a class="list-group-item list-group-item-action" data-toggle="list" role="tab">Information</a>
+          <a class="list-group-item list-group-item-action" data-toggle="list" role="tab">Einstellungen</a>
+        </div>
+
+        <br><br>
+        <ul class="list-group list-group-horizontal-xl justify-content-center" id="horizontalListgroup">
+          <li class="list-group-item">Apfel</li>
+          <li class="list-group-item">Birne</li>
+          <li class="list-group-item">Karotte</li>
+        </ul>
+      </div>
+    </div>
+    <!-- Modals -->
+    <br><br id="Modals">
+    <h3>Modals:</h3>
+    <br><br>
+    <div class="container" data-aos="fade-up-right">
+      <div class="text-center">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+          Hi, ich bin ein Modal. Click on me!
+        </button>
+        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog"
+          aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Ich bin ein Modal.</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                Hier können ganz wichtige Informationen stehen, die für Menschen von Bedeutung sein können.
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br><br>
+        <div>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
+            data-whatever="@abnehmen">Modal für Abnehmen</button>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
+            data-whatever="@cardio">Modal für Cardio</button>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
+            data-whatever="@krafttraining">Modal für Krafttraining</button>
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Neue Nachricht</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="form-group">
+                      <label for="recipient-name" class="col-form-label">Empfänger:</label>
+                      <input type="text" class="form-control" id="recipient-name">
+                    </div>
+                    <div class="form-group">
+                      <label for="message-text" class="col-form-label">Nachricht:</label>
+                      <textarea class="form-control" id="message-text"></textarea>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary" data-dismiss="modal">Send</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Popover -->
+    <br><br id="Popover">
+    <div data-aos="fade-down">
+      <h3>Popover:</h3>
+      <br><br>
+      <div class="container">
+        <div class="text-center">
+          <button type="button" class="btn btn-primary" data-toggle="popover" title="Hast du gewusst"
+            data-content=", dass der Eiffelturm im Sommer 15 cm höher ist als im Winter?">Hast du gewusst?</button>
+          <br><br>
+          <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover"
+            data-placement="top" data-content="Hey, ich hoffe dir gefällt meine Seite.">
+            Popover message on top
+          </button>
+          <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover"
+            data-placement="right" data-content="Ja, ich bin ein Popup.">
+            Popover message on right
+          </button>
+          <br><br>
+          <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover"
+            data-placement="bottom" data-content="Yes, we can do it.">
+            Popover message on bottom
+          </button>
+          <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover"
+            data-placement="left" data-content="Bootstrap">
+            Popover message on left
+          </button>
+        </div>
+      </div>
+    </div>
+    <br><br>
+  </main>
+  <script src="animationScript.js"></script>
+</body>
+</html>
