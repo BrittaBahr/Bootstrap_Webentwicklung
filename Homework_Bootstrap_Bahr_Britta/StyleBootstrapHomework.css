@@ -1,6 +1,7 @@
 body{
     background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 51%, #ffecd2 100%);
     margin: auto;
+    overflow-x: hidden;
 }
 h3{
     color: purple;
